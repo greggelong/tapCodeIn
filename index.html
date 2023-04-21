@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js" integrity="sha512-3RlxD1bW34eFKPwj9gUXEWtdSMC59QqIqHnD8O/NoTwSJhgxRizdcFVQhUMFyTp5RwLTDL0Lbcqtl8b7bFAzog==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <title>BLINK! IN</title>
+  <style>
+   .content {
+        width: 600px; 
+        margin: 0 auto;
+      }
+    html, body {
+    height: 100%;
+  }
+  
+  body {
+    padding: 3%;
+  
+      color: #66FF00;
+      background-color: rgb(73, 5, 5);
+      font-size: large;
+      /*text-align: center;*/
+      font-family: monospace; 
+    /* This centers our sketch horizontally. */
+    justify-content: center;
+  
+    /* This centers our sketch vertically.  
+    align-items: center;*/
+  }
+  </style>
+   
+  <script src="sketch.js"></script>
+</head>
+
+<body>
+  <div class="content">
+    <!-- Page content -->
+  <pre>
+                 TAP CODE
+                          1 | 2 | 3 | 4 | 5
+  count the             -------------------
+  blinks               1 |a | b |c/k| d | e
+                        ------------------- 
+  Letters are pairs    2 |f | g | h | i | j
+  of blinks. First      -------------------
+  row then column.     3 |l | m | n | o | p
+  For example:          ------------------- 
+    "r"  is 4 blinks   4 |q | r | s | t | u
+       then 2 blinks    ------------------- 
+                       5 |v | w | x | y | z
+  ##########################################                                          
+  A green flash shows the beginning of the word.            
+  Press "n" for the next word.
+  Press "a" to toggle seeing the word.
+</pre>
+   
+  <div id="sketch-holder">
+    <!-- Our sketch will go here! size in script -->
+  </div>
+  </div>
+</body>
+
+</html>
