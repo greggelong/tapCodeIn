@@ -36,6 +36,12 @@ function draw() {
   text(firstD, 100, 30);
   text(secondD, 150, 30);
   text(mysent, 30, 100);
+  
+  fill(120);
+  if (taps>0){
+    rect (0,50,elapsedFrames*(width/8),20)
+    }
+  // put stroke and fill for square
   stroke(255, 0, 0);
   fill(0);
 
@@ -46,6 +52,7 @@ function draw() {
     fill(0);
   }
 
+ 
   rect(width / 2 - 150, height / 2 - 150, 300, 300);
 
   blinktime++;
@@ -54,8 +61,9 @@ function draw() {
   if (blinktime > 2) {
     tapped = false;
   }
-
+  if (taps>0){  // only count elapsed frames if taps greater than zero
   elapsedFrames = frameCount - clickedFrame;
+  }
   // check taps for ellapsed time and max taps
   if ((elapsedFrames > 8 || taps >= 5) && taps != 0) {
     // if firstD is empty fill it
