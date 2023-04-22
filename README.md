@@ -1,5 +1,9 @@
 # tapCodeIn
 
+live at:
+
+https://greggelong.github.io/tapCodeIn
+
 tap code message by tapping on screen or pressing button 
 
 This is similar to the way I did it on arduino
@@ -19,4 +23,4 @@ Another problem is you need to tell when one set of taps is over
 
 in this sketch I have set the framerate to 3, which slows down the interaction.  if there is about a 2 second pause the computer will think you are done with that set of taps and move to the next
 
-My checking logic for this is a bit different than how I did it on arduino. Specifically in the case of zero taps 
+My checking logic for this is a bit different than how I did it on arduino. Specifically in the case of zero taps UPDATE: I have now chaged the arduion code to work like this code
