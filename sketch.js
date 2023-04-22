@@ -16,6 +16,8 @@ let letterMtrx = [
   ["q", "r", "s", "t", "u"],
   ["v", "w", "x", "y", "z"],
 ];
+
+let attention = 8; // to check the number max number of frames that have elapsed before the computer stops counting taps as a set
 function setup() {
   cnv = createCanvas(600, 600);
   cnv.parent("sketch-holder");
@@ -36,12 +38,19 @@ function draw() {
   text(firstD, 100, 30);
   text(secondD, 150, 30);
   text(mysent, 30, 100);
-  
+  // attention bar outline
+  noFill()
+  strokeWeight(4)
+  stroke(0,255,0)
+  rect(18,48,(width-width/4)+2,23);
+  // attention bar fill
+  noStroke()
   fill(120);
   if (taps>0){
-    rect (0,50,elapsedFrames*(width/8),20)
+    rect (20,50,elapsedFrames*((width-width/4)/(attention)),20);
     }
   // put stroke and fill for square
+  stroke(2)
   stroke(255, 0, 0);
   fill(0);
 
@@ -65,7 +74,7 @@ function draw() {
   elapsedFrames = frameCount - clickedFrame;
   }
   // check taps for ellapsed time and max taps
-  if ((elapsedFrames > 8 || taps >= 5) && taps != 0) {
+  if ((elapsedFrames > attention|| taps >= 5) && taps != 0) {
     // if firstD is empty fill it
     if (firstD === 0) {
       firstD = taps;
